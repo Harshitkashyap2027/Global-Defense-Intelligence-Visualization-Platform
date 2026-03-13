@@ -34,7 +34,10 @@ let redisAvailable = false;
 
 async function connectRedis() {
   try {
-    redisClient = createClient({ url: REDIS_URL });
+    redisClient = createClient({
+      url: REDIS_URL,
+      socket: { reconnectStrategy: (retries) => retries < 3 ? 500 : false },
+    });
     redisClient.on('error', (err) => {
       if (redisAvailable) console.warn('[Redis] Connection error - running without cache:', err.message);
       redisAvailable = false;
@@ -43,7 +46,11 @@ async function connectRedis() {
       console.log('[Redis] Connected');
       redisAvailable = true;
     });
-    await redisClient.connect();
+    // Race the connect against a 3-second timeout so the server starts even if Redis is down
+    await Promise.race([
+      redisClient.connect(),
+      new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 3000)),
+    ]);
   } catch (err) {
     console.warn('[Redis] Unavailable - running without cache:', err.message);
   }
