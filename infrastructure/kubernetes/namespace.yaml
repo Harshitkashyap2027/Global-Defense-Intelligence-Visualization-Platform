@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gdivp
+  labels:
+    app.kubernetes.io/name: gdivp
+    app.kubernetes.io/part-of: global-defense-intelligence-visualization-platform
