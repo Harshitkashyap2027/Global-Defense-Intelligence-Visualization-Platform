@@ -11,23 +11,56 @@ A real-time, full-stack defense intelligence visualization platform featuring a 
 
 ---
 
+## 📸 Screenshots & Demo
+
+### Main Dashboard — Globe + Event Stream
+![Main Dashboard](docs/screenshots/01_main_dashboard.png)
+
+### Analytics Tab
+![Analytics Tab](docs/screenshots/02_analytics_tab.png)
+
+### Event Stream Tab
+![Event Stream](docs/screenshots/03_event_stream_tab.png)
+
+### Layer Controls — Satellites Enabled
+![Satellites Layer On](docs/screenshots/04_layers_satellites_on.png)
+
+### Layer Controls — Weather Enabled
+![Weather Layer On](docs/screenshots/05_layers_weather_on.png)
+
+### Globe Zoomed In
+![Globe Zoomed](docs/screenshots/06_globe_zoomed.png)
+
+### Full Layout Overview
+![Full Layout](docs/screenshots/07_full_layout.png)
+
+### 🎥 Demo Video
+A full walkthrough video (`docs/demo_walkthrough.webm`) is included in the repository and demonstrates:
+- Globe rotation and zoom
+- Switching between Event Stream and Analytics tabs
+- Toggling layer controls (Satellites, Weather)
+- Real-time stats display
+
+---
+
 ## 📋 Table of Contents
 
-1. [Features](#-features)
-2. [Architecture](#️-architecture)
-3. [Technology Stack](#️-technology-stack)
-4. [Prerequisites — What to Download & Install](#-prerequisites--what-to-download--install)
-5. [Running Locally in VS Code Terminal](#-running-locally-in-vs-code-terminal)
+1. [Screenshots & Demo](#-screenshots--demo)
+2. [Features](#-features)
+3. [Architecture](#️-architecture)
+4. [Technology Stack](#️-technology-stack)
+5. [Prerequisites — What to Download & Install](#-prerequisites--what-to-download--install)
+6. [Running Locally in VS Code Terminal](#-running-locally-in-vs-code-terminal)
    - [Method 1: Docker Compose (Recommended)](#method-1-docker-compose-recommended)
    - [Method 2: Manual Setup (Service by Service)](#method-2-manual-setup-service-by-service)
-6. [Project Structure](#-project-structure)
-7. [Environment Variables](#️-environment-variables)
-8. [API Reference](#-api-reference)
-9. [Globe Controls](#-globe-controls)
-10. [Kubernetes Deployment](#️-kubernetes-deployment)
-11. [Mock Data Simulation](#-mock-data-simulation)
-12. [Data Flow](#-data-flow)
-13. [Security Features](#-security-features)
+7. [Project Structure](#-project-structure)
+8. [Environment Variables](#️-environment-variables)
+9. [API Reference](#-api-reference)
+10. [Globe Controls](#-globe-controls)
+11. [Kubernetes Deployment](#️-kubernetes-deployment)
+12. [Mock Data Simulation](#-mock-data-simulation)
+13. [Data Flow](#-data-flow)
+14. [Security Features](#-security-features)
 
 ---
 
